@@ -13,32 +13,45 @@ const page = () => {
 						height={100}
 						className="mb-7"
 					/>
-                    <div className="flex flex-row">
-                        <div>
-						<h1 className="text-[28px] text-[#202124] mb-[20px]">
-							데이터 AI 트렌드 보고서
-						</h1>
-						<p className="text-[16px] text-[#5f6368] leading-[1.6]">
-							2023 년 데이터 AI 트렌드 보고서를 통해 Google Cloud의
-							인사이트와 IDC 연구 결과 내용을 중...
-						</p>
-						<ul className="pl-[20px] text-[16px] text-[#202124] leading-[1.6]">
-							<li>Data Cloud가 지향하는 방향과 이유</li>
-							<li>최신 데이터 생태계가 설계되는 방식</li>
-							<li>AI가 오늘날의 데이터 전략에 차별화된 역할</li>
-							<li>
-								비즈니스 인텔리전스(BI) 투자로 더 나은 결과를 얻기 위한
-								필요사항
-							</li>
-							<li>데이터 보안 문제와 기업의 이를 해결하는 방법</li>
-						</ul>
-					</div>
-                    <div className="border-l-2 border-[#ddd] m-[20px]">
+					<div className="flex flex-row">
+						<div>
+							<h1 className="text-[28px] text-[#202124] mb-[20px]">
+								그 파워는 엄청날 것입니다. 하지만 현재 비즈니스 및 IT
+								의사 결정권자 중 15%만이 빠르게 변화하는 이 분야에 대한
+								전문 지식을 갖추고 있다고 생각합니다.
+							</h1>
+							<p className="text-[16px] text-[#5f6368] leading-[1.6]">
+								이 포괄적인 가이드는 최신 정보를 제공할 뿐만 아니라
+								비즈니스에 생성형 AI를 도입하기 위한 명확한 경로를
+								제시하는 데 도움이 될 것입니다. 이 가이드의 내용은
+								다음과 같습니다:
+							</p>
+							<ul className="pl-[20px] text-[16px] text-[#202124] leading-[1.6] list-disc">
+								<li>생성형 AI에 대한 간략한 입문서</li>
+								<li>생성형 AI 시작을 위한 30일간의 단계별 가이드</li>
+								<li>생성형 AI의 영향력을 측정하기 위한 KPI</li>
+								<li>
+									도이치뱅크, 타임 등의 산업별 사용 사례 및 고객
+									스토리.
+								</li>
+							</ul>
+							<p className="text-[16px] text-[#5f6368] leading-[1.6]">
+								지금 바로 generative AI가 비즈니스에 새로운 가치를
+								제공하는 데 어떻게 도움이 되는지 알아보세요.
+							</p>
+						</div>
+                        <div className="flex justify-center items-center">
 
-                    <Image src={"/assets/images/banner.png"} alt="AI" width={400} height={300} />
-                    </div>
-                    </div>
-					
+						<Image
+							src={"/assets/images/banner.png"}
+							alt="AI"
+							width={0}
+							height={0}
+                            sizes="100vw"
+							className="border-4 border-gray-600 m-[20px] w-[700px] h- "
+						/>
+                        </div>
+					</div>
 				</div>
 
 				{/* Right Section (Form) */}
@@ -54,7 +67,7 @@ const page = () => {
 							지금 다운로드
 						</h2>
 					</div>
-					<form id="download-form" className="flex flex-col">
+					<form id="download-form" className="flex flex-col mx-10 my-3">
 						<input
 							type="text"
 							placeholder="이름*"
@@ -100,14 +113,20 @@ const page = () => {
 							placeholder="직함 수"
 							className="w-full p-[12px] my-[10px] text-[14px] rounded border border-[#ddd] bg-white text-[#333] focus:border-[#0F9D58] focus:outline-none"
 						/>
-						<input
-							type="text"
-							placeholder="산업군"
+						<select
+							required
 							className="w-full p-[12px] my-[10px] text-[14px] rounded border border-[#ddd] bg-white text-[#333] focus:border-[#0F9D58] focus:outline-none"
-						/>
+						>
+							<option value="">산업군 선택*</option>
+							<option value="tech">Singapore</option>
+							<option value="finance">South Korea</option>
+							<option value="health">Indonesia</option>
+							<option value="retail">India</option>
+						</select>
 						<input
 							type="text"
 							placeholder="국가 혹은 지역*"
+							required
 							className="w-full p-[12px] my-[10px] text-[14px] rounded border border-[#ddd] bg-white text-[#333] focus:border-[#0F9D58] focus:outline-none"
 						/>
 						<div className="flex flex-col justify-center items-center">
@@ -120,7 +139,7 @@ const page = () => {
 							</label>
 							<button
 								type="submit"
-								className="w-11/12 p-3 my-4 text-lg rounded bg-[#4285F4] text-white font-bold border-none cursor-pointer transition duration-300 hover:bg-[#DB4437]"
+								className="w-full p-3 my-4 text-lg rounded bg-[#4285F4] text-white font-bold border-none cursor-pointer transition duration-300 hover:bg-[#DB4437]"
 							>
 								다운로드
 							</button>
